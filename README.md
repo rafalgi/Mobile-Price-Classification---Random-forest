@@ -1,43 +1,54 @@
-# Mobile Price Classification Random-forest
-Project Description
-Bob has started his own mobile phone company and aims to compete with industry giants like Apple and Samsung. To thrive in the competitive mobile phone market, Bob needs to accurately estimate the price range of the mobile phones his company creates based on their features. However, Bob is not proficient in Machine Learning, so he needs your help to determine the relationship between various mobile phone features (such as RAM, Internal Memory, etc.) and their selling price.
+# Mobile Price Classification
 
-The goal of this project is to classify mobile phones into different price ranges based on their features. Instead of predicting the actual price, we aim to classify phones into predefined price ranges. This classification will help Bob make informed decisions about pricing his products competitively.
+## Project Description
+This project aims to classify mobile phones into different price ranges based on their features using machine learning techniques. The dataset includes various features of mobile phones, and the target variable is the price range.
 
-Dataset Description
-The dataset contains sales data of mobile phones from various companies. Each row in the dataset represents a mobile phone and its corresponding features. The features include:
+## Data Description
+The dataset contains detailed information about mobile phones and their features. Here is the list of variables and their meanings:
+- **id**: Unique identifier for each phone.
+- **battery_power**: Total energy a battery can store in mAh.
+- **blue**: Indicates if the phone has Bluetooth (1: Yes, 0: No).
+- **clock_speed**: Speed at which the microprocessor executes instructions in GHz.
+- **dual_sim**: Indicates if the phone supports dual SIM (1: Yes, 0: No).
+- **fc**: Front camera resolution in megapixels.
+- **four_g**: Indicates if the phone supports 4G (1: Yes, 0: No).
+- **int_memory**: Internal memory in GB.
+- **m_dep**: Depth of the phone in cm.
+- **mobile_wt**: Weight of the phone in grams.
+- **n_cores**: Number of cores of the processor.
+- **pc**: Rear camera resolution in megapixels.
+- **px_height**: Height of the screen resolution in pixels.
+- **px_width**: Width of the screen resolution in pixels.
+- **ram**: RAM in MB.
+- **sc_h**: Height of the screen in cm.
+- **sc_w**: Width of the screen in cm.
+- **talk_time**: Maximum time that a phone can be used continuously without recharging in hours.
+- **three_g**: Indicates if the phone supports 3G (1: Yes, 0: No).
+- **touch_screen**: Indicates if the phone has a touchscreen (1: Yes, 0: No).
+- **wifi**: Indicates if the phone supports WiFi (1: Yes, 0: No).
+- **price_range**: Target variable indicating the price range of the mobile phone:
+  - 0: Low cost
+  - 1: Medium cost
+  - 2: High cost
+  - 3: Very high cost
 
-Battery Power: Total energy a battery can store in one time measured in mAh.
-Bluetooth: Indicates whether the phone has Bluetooth (1: Yes, 0: No).
-Clock Speed: Speed at which microprocessor executes instructions.
-Dual Sim: Indicates whether the phone supports dual SIM (1: Yes, 0: No).
-Front Camera: Front camera megapixels.
-4G: Indicates whether the phone supports 4G (1: Yes, 0: No).
-Internal Memory: Internal memory in Gigabytes.
-Mobile Depth: Depth of mobile phone in cm.
-Mobile Weight: Weight of mobile phone.
-N-cores: Number of cores of the processor.
-Primary Camera: Primary camera megapixels.
-Pixel Resolution Height: Height of the mobile screen in pixels.
-Pixel Resolution Width: Width of the mobile screen in pixels.
-RAM: Random Access Memory in Megabytes.
-Screen Height: Height of the mobile screen in cm.
-Screen Width: Width of the mobile screen in cm.
-Talk Time: Maximum time in hours that a phone can be used continuously without recharging.
-3G: Indicates whether the phone supports 3G (1: Yes, 0: No).
-Touch Screen: Indicates whether the phone has a touch screen (1: Yes, 0: No).
-WiFi: Indicates whether the phone has WiFi (1: Yes, 0: No).
-The target variable is price_range, which indicates the price range of the mobile phone. It is a categorical variable with the following values:
+## Data Analysis
+The analysis includes the following steps:
+1. **Loading Libraries and Data**: Importing necessary libraries and loading the dataset.
+2. **Data Overview**: Displaying the first few rows of the dataset and checking column names.
+3. **Descriptive Statistics**: Generating summary statistics for the dataset.
+4. **Data Cleaning**: Checking for missing or duplicated values.
+5. **Exploratory Data Analysis (EDA)**:
+   - **Proportion of Price Ranges**: Visualizing the distribution of the price range variable.
+   - **Correlation Matrix**: Displaying the correlation between different features and the price range.
 
-0: Low cost
-1: Medium cost
-2: High cost
-3: Very high cost
+## Results
+- **Data Quality**: The dataset is well-prepared for analysis with no missing or duplicated values.
+- **Balanced Dataset**: The target variable (price range) is evenly distributed, ensuring that the model will not favor any particular class.
+- **Strong Correlations**: RAM has a very strong positive correlation with the price range, followed by battery power and screen resolution.
 
-Project Objectives
-Exploratory Data Analysis (EDA): Perform EDA to understand the distribution of features and their relationship with the price range.
-Data Preprocessing: Clean and preprocess the data to make it suitable for building machine learning models.
-Feature Engineering: Create new features or modify existing ones to improve the model's performance.
-Model Building: Train different classification models to classify mobile phones into the appropriate price range.
-Model Evaluation: Evaluate the performance of the models using appropriate metrics and choose the best model.
-Deployment: Provide a solution that Bob can use to classify new mobile phones based on their features.
+## Conclusion
+This project provides a detailed analysis of mobile phone features and their impact on the price range. The insights gained from this analysis can be used to build predictive models for classifying mobile phones into different price ranges.
+
+## References
+- [Mobile Price Prediction Random Forest on Kaggle](https://www.kaggle.com/code/rafaaell/mobile-price-predicition-random-forest)
